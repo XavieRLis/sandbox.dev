@@ -16,3 +16,8 @@ _errors:
 
 _main:
     resource: routing.yml
+
+
+xl_core:
+    resource: "@XavierlisCoreBundle/Resources/config/routing.yml"
+    prefix:   /

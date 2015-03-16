@@ -1,0 +1,9 @@
+Delete: Удалить
+xl:
+    labels:
+        main:
+            created: Создан
+            updated: Обновлен
+            closed: Закрыт
+        actions:
+            main: Действия

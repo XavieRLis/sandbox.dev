@@ -1,0 +1,8 @@
+stof_doctrine_extensions:
+
+    orm:
+        default:
+            timestampable: true
+            sluggable: true
+    class:
+        sluggable: Xavierlis\CoreBundle\Listener\SluggableListener
