@@ -24,6 +24,7 @@
         "twitter/bootstrap": "3.*",
         "components/jquery": "1.11.1",
         "stof/doctrine-extensions-bundle": "~1.1@dev",
+        "doctrine/doctrine-fixtures-bundle": "dev-master",
         "doctrine/data-fixtures": "dev-master",
         "vich/uploader-bundle": "0.14.*",
         "egeloen/ckeditor-bundle": "~2.0",
