@@ -35,7 +35,7 @@ twig:
     strict_variables: "%kernel.debug%"
     form:
         resources:
-            - 'XavierCoreBundle:Form:fields.html.twig'
+            - 'XavierlisCoreBundle:Form:fields.html.twig'
 
 # Assetic Configuration
 assetic:
