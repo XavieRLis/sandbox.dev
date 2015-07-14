@@ -6,10 +6,11 @@ imports:
     - { resource: bundles/vich_uploader.yml }
     - { resource: bundles/ivory_ckeditor.yml }
     - { resource: bundles/fm_elfinder.yml }
+    - { resource: bundles/fos_user.yml }
 
 framework:
     #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
+    translator:      { fallbacks: ["%locale%"] }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"

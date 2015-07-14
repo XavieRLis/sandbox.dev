@@ -1,0 +1,4 @@
+services:
+#    xavierlis_user.example:
+#        class: Xavierlis\UserBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

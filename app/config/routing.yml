@@ -1,1 +1,5 @@
+xavierlis_user:
+    resource: "@XavierlisUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 

@@ -1,0 +1,8 @@
+Xavierlis\UserBundle\Entity\User:
+    type:  entity
+    table: xl_user
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
