@@ -29,6 +29,7 @@ class AppKernel extends Kernel
             /* Xavierlis Bundles */
             new Xavierlis\CoreBundle\XavierlisCoreBundle(),
             new Xavierlis\UserBundle\XavierlisUserBundle(),
+            new Xavierlis\ContentBundle\XavierlisContentBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

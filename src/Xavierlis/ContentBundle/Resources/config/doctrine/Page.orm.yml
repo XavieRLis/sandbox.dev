@@ -1,0 +1,58 @@
+Xavierlis\ContentBundle\Entity\Page:
+
+    type:  entity
+    repositoryClass: Xavierlis\ContentBundle\Entity\Repository\PageRepository
+    table: xl_content_page
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+
+        title:
+            type: string
+            length: 64
+
+        slug:
+            type: string
+            length: 128
+            gedmo:
+                slug:
+                    separator: _
+                    style: lower
+                    fields:
+                        - title
+
+        body:
+            type: text
+
+        metaTitle:
+            type: string
+            nullable: true
+            column: meta_title
+
+        metaDescription:
+            type: text
+            nullable: true
+            column: meta_description
+
+        metaKeywords:
+            type: text
+            nullable: true
+            column: meta_keywords
+
+        updatedAt:
+            type: datetime
+            column: updated_at
+            gedmo:
+                timestampable:
+                    on: [update, create]
+
+        isPublished:
+            type: boolean
+            nullable: true
+            column: is_published
+            options:
+                default: 1
