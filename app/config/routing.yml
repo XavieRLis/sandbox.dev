@@ -2,4 +2,7 @@ xavierlis_user:
     resource: "@XavierlisUserBundle/Resources/config/routing.yml"
     prefix:   /
 
+xl_core:
+    resource: "@XavierlisCoreBundle/Resources/config/routing.yml"
+    prefix:   /
 

@@ -1,4 +1,4 @@
 services:
 #    xavierlis_content.example:
-#        class: Xavierlis\ContentBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+#        class: Xavierlis\ContentBundle\DefaultController
+

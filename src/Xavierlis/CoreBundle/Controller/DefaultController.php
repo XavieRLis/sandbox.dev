@@ -10,4 +10,8 @@ class DefaultController extends Controller
     {
         return $this->render('XavierlisCoreBundle:Default:index.html.twig');
     }
+    public function adminAction()
+    {
+        return $this->render('XavierlisCoreBundle:Admin:index.html.twig');
+    }
 }

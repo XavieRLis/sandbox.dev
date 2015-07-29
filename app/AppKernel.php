@@ -22,8 +22,7 @@ class AppKernel extends Kernel
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new FM\ElfinderBundle\FMElfinderBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-
-
+            new Avanzu\AdminThemeBundle\AvanzuAdminThemeBundle(),
 
 
             /* Xavierlis Bundles */
