@@ -1,0 +1,30 @@
+xl_content_page_admin_index:
+    path:     /
+    defaults: { _controller: "XavierlisContentBundle:Admin/Page:index" }
+
+xl_content_page_admin_show:
+    path:     /{id}/show
+    defaults: { _controller: "XavierlisContentBundle:Admin/Page:show" }
+
+xl_content_page_admin_new:
+    path:     /new
+    defaults: { _controller: "XavierlisContentBundle:Admin/Page:new" }
+
+xl_content_page_admin_create:
+    path:     /create
+    defaults: { _controller: "XavierlisContentBundle:Admin/Page:create" }
+    methods:  POST
+
+xl_content_page_admin_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "XavierlisContentBundle:Admin/Page:edit" }
+
+xl_content_page_admin_update:
+    path:     /{id}/update
+    defaults: { _controller: "XavierlisContentBundle:Admin/Page:update" }
+    methods:  [POST, PUT]
+
+xl_content_page_admin_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "XavierlisContentBundle:Admin/Page:delete" }
+    methods:  [POST, DELETE]

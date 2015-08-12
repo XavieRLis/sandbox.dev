@@ -1,0 +1,15 @@
+{% extends 'XavierlisCoreBundle:Admin:base.html.twig' %}
+
+{% block page_content -%}
+    <h1>Page creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('xl_content_page_admin_index') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}
