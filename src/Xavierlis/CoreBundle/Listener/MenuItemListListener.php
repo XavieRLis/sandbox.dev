@@ -25,8 +25,11 @@ class MenuItemListListener
         $earg      = array();
         $rootItems = array(
             $dash = new MenuItemModel('dashboard', 'Dashboard', 'xl_admin_home', $earg, 'fa fa-dashboard'),
+            $pages = new MenuItemModel('pages', 'Страницы', '', $earg, 'fa fa-file-text-o')
 
         );
+        $pages->addChild(new MenuItemModel('pages-create', 'Создать', 'xl_content_page_admin_new', $earg))
+            ->addChild($icons = new MenuItemModel('pages-index', 'Список', 'xl_content_page_admin_index', $earg));
 
         return $this->activateByRoute($request->get('_route'), $rootItems);
     }

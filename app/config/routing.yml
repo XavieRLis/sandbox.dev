@@ -6,3 +6,6 @@ xl_core:
     resource: "@XavierlisCoreBundle/Resources/config/routing.yml"
     prefix:   /
 
+xl_content:
+    resource: "@XavierlisContentBundle/Resources/config/routing.yml"
+    prefix:   /

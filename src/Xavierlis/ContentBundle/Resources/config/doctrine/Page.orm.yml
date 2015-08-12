@@ -48,7 +48,7 @@ Xavierlis\ContentBundle\Entity\Page:
             column: updated_at
             gedmo:
                 timestampable:
-                    on: [update, create]
+                    on: update
 
         isPublished:
             type: boolean

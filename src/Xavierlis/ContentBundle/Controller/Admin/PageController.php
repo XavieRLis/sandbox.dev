@@ -1,6 +1,6 @@
 <?php
 
-namespace Xavierlis\ContentBundle\Controller;
+namespace Xavierlis\ContentBundle\Controller\Admin;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -44,10 +44,10 @@ class PageController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('xl_content_page_admin_show', array('id' => $entity->getId())));
         }
 
-        return $this->render('XavierlisContentBundle:Page:new.html.twig', array(
+        return $this->render('XavierlisContentBundle:Admin/Page:new.html.twig', array(
             'entity' => $entity,
             'form'   => $form->createView(),
         ));
@@ -63,7 +63,7 @@ class PageController extends Controller
     private function createCreateForm(Page $entity)
     {
         $form = $this->createForm(new PageType(), $entity, array(
-            'action' => $this->generateUrl('_create'),
+            'action' => $this->generateUrl('xl_content_page_admin_create'),
             'method' => 'POST',
         ));
 
@@ -81,7 +81,7 @@ class PageController extends Controller
         $entity = new Page();
         $form   = $this->createCreateForm($entity);
 
-        return $this->render('XavierlisContentBundle:Page:new.html.twig', array(
+        return $this->render('XavierlisContentBundle:Admin/Page:new.html.twig', array(
             'entity' => $entity,
             'form'   => $form->createView(),
         ));
@@ -134,16 +134,16 @@ class PageController extends Controller
     }
 
     /**
-    * Creates a form to edit a Page entity.
-    *
-    * @param Page $entity The entity
-    *
-    * @return \Symfony\Component\Form\Form The form
-    */
+     * Creates a form to edit a Page entity.
+     *
+     * @param Page $entity The entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
     private function createEditForm(Page $entity)
     {
         $form = $this->createForm(new PageType(), $entity, array(
-            'action' => $this->generateUrl('_update', array('id' => $entity->getId())),
+            'action' => $this->generateUrl('xl_content_page_admin_update', array('id' => $entity->getId())),
             'method' => 'PUT',
         ));
 
@@ -172,7 +172,7 @@ class PageController extends Controller
         if ($editForm->isValid()) {
             $em->flush();
 
-            return $this->redirect($this->generateUrl('_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('xl_content_page_admin_edit', array('id' => $id)));
         }
 
         return $this->render('XavierlisContentBundle:Page:edit.html.twig', array(
@@ -202,7 +202,7 @@ class PageController extends Controller
             $em->flush();
         }
 
-        return $this->redirect($this->generateUrl(''));
+        return $this->redirect($this->generateUrl('xl_content_page_admin_index'));
     }
 
     /**
@@ -215,10 +215,10 @@ class PageController extends Controller
     private function createDeleteForm($id)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('_delete', array('id' => $id)))
+            ->setAction($this->generateUrl('xl_content_page_admin_delete', array('id' => $id)))
             ->setMethod('DELETE')
             ->add('submit', 'submit', array('label' => 'Delete'))
             ->getForm()
-        ;
+            ;
     }
 }
